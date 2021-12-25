@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+using namespace std;
+int main() {
+  
+ 
+
+  double value_quadratic[] = {0, 0, 0};
+  char characters_output[] = {'a', 'b', 'c'};
+
+//for i in range 3, assign input to a new variable
+  for(int i = 0; i < 3; i++){
+    cout << "Enter " << characters_output[i] << ":\n";
+    cin >> value_quadratic[i];
+  }
+
+  double a = value_quadratic[0];
+  double b = value_quadratic[1];
+  double c = value_quadratic[2];
+
+  double root1;
+  double root2;
+
+  double power = pow(b, 2);
+
+  root1 = ( (-1 * b) + sqrt(power - (4 * a * c) ) )/ (2 * a);
+  root2 = ( (-1 * b) - sqrt(power - (4 * a * c) ) ) / (2 * a);
+  cout << root1 << "\n" << root2;
+}
